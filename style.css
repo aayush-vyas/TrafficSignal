@@ -5,22 +5,69 @@ body {
 }
 
 .signal-container {
-    width: 500px;
-    height: 500px;
-    background-color: red;
-    
+    width: 700px;
+    /* height: 700px; */
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
 }
 
 
 .signal-box {
-    width: 100px;
-    height: 300px;
-    background-color: aqua;
+    width: 50px;
+    height: 150px;
+    background-color: black;
+    border: 2px solid black;
+    margin: 10px;
+
+}
+
+#signal-up {
+    /* align-self: flex-end; */
+    display: flex;
+    flex-direction: row;
+
+}
+
+#signal-down {
+    /* align-self: flex-start; */
+    transform: rotate(180deg);
+}
+
+#signal-left {
+    transform: rotate(90deg);
+}
+
+#signal-right {
+    transform: rotate(-90deg);
 }
 
 .circle {
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-color: yellow;
+}
+
+.circle-red {
+    background-color: #cc3232;
+}
+
+.circle-green {
+    background-color: #2dc937;
+}
+
+.circle-yellow {
+    background-color: #e7b416;
+}
+
+.direction {
+    visibility: hidden;
+}
+
+.timer {
+
+    transform: rotate(0deg) !important  ;
 }
