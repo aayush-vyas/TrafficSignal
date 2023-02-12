@@ -15,6 +15,12 @@ body {
 
 }
 
+.timer {
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
 
 .signal-box {
     width: 50px;
@@ -69,5 +75,5 @@ body {
 
 .timer {
 
-    transform: rotate(0deg) !important  ;
+    transform: rotate(0deg) !important;
 }

@@ -3,14 +3,19 @@ const signals = document.querySelectorAll('.signal-box');
 let currentSignalIndex = 0;
 let timer = 20;
 
-setInterval(function () {
-
+setInterval(() => {
     for (let i = 0; i < signals.length; i++) {
+        let yellow = signals[i].getElementsByClassName("circle-yellow")[0];
+        let red = signals[i].getElementsByClassName("circle-red")[0];
+        let green = signals[i].getElementsByClassName("circle-green")[0];
+        let timers = signals[i].getElementsByClassName("timer");
+        // if (timers.length > 0) {
+        //     timers[0].innerHTML = timer;
+
+        // }
+        console.log(timers);
+
         if (i === currentSignalIndex) {
-            let yellow = signals[i].getElementsByClassName("circle-yellow")[0];
-            let red = signals[i].getElementsByClassName("circle-red")[0];
-            let green = signals[i].getElementsByClassName("circle-green")[0];
-            signals[i].getElementsByClassName("timer").innerHTML = timer;
             if (timer > 5) {
                 yellow.style.backgroundColor = "black";
                 red.style.backgroundColor = "black";
@@ -25,15 +30,11 @@ setInterval(function () {
                 green.style.backgroundColor = "black";
             }
         } else {
-            let yellow = signals[i].getElementsByClassName("circle-yellow")[0];
-            let red = signals[i].getElementsByClassName("circle-red")[0];
-            let green = signals[i].getElementsByClassName("circle-green")[0];
             yellow.style.backgroundColor = "black";
             red.style.backgroundColor = "red";
             green.style.backgroundColor = "black";
         }
     }
-
 
     timer--;
 
@@ -41,4 +42,5 @@ setInterval(function () {
         timer = 20;
         currentSignalIndex = (currentSignalIndex + 1) % signals.length;
     }
-}, 1000); 
+
+}, 1000);
